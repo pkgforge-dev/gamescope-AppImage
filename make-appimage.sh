@@ -15,10 +15,11 @@ export DEPLOY_VULKAN=1
 
 # Deploy dependencies
 quick-sharun \
-	/usr/bin/gamescope*      \
-	/usr/lib/*gamescope*.so* \
-	/usr/share/gamescope     \
-	/usr/share/vulkan/implicit_layer.d
+	/usr/bin/gamescope*                \
+	/usr/lib/*gamescope*.so*           \
+	/usr/share/gamescope               \
+	/usr/share/vulkan/implicit_layer.d \
+	/usr/bin/Xwayland
 
 # Additional changes can be done in between here
 
