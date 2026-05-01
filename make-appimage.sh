@@ -25,6 +25,11 @@ quick-sharun \
 # Turn AppDir into AppImage
 quick-sharun --make-appimage
 
+# becasue this app launches vkcube and there is no gpu in the CI, we have to
+# install vkswrast, we do not normally bundle this since it is slow and has
+# a massive dependency to llvm
+pacman -S --noconfirm vulkan-swrast vulkan-tools
+
 # Test the app for 12 seconds, if the test fails due to the app
 # having issues running in the CI use --simple-test instead
-quick-sharun --test ./dist/*.AppImage
+quick-sharun --test ./dist/*.AppImage vkcube
