@@ -12,6 +12,7 @@ export DESKTOP=DUMMY
 export MAIN_BIN=gamescope
 export DEPLOY_OPENGL=1
 export DEPLOY_VULKAN=1
+export PATH_MAPPING='/usr/bin/Xwayland:${SHARUN_DIR}/bin/Xwayland'
 
 # Deploy dependencies
 quick-sharun \
